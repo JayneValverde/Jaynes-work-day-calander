@@ -7,7 +7,7 @@
 // Save reference to import DOM elements 
 var timeDisplayEl = $('#time-display');
 let textarea;
-let workingHours = [9,10,11,12,13,14,15,16,17,18,19,]
+let workingHours = [9,10,11,12,13,14,15,16,17,]
 
  // Function to display the time 
 function displayTime() {
