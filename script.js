@@ -1,8 +1,8 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
+// The function that was used to wrap the code for jQuery was not used
+// because an HTML call for 'onclick' needed to be rendered. 
+// below is the usage of  mostly regular JavaScript
 // $(function () {
+// });
 
 // Save reference to import DOM elements 
 var timeDisplayEl = $('#time-display');
@@ -15,10 +15,9 @@ function displayTime() {
   timeDisplayEl.text(rightNow.format('MMM DD YYYY [at] hh:mm:ss a'));
   }
 
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. 
+//Saving text to local storage by Hour/textArea 
 function saveText(hour) {
+  console.log("test");
   textarea=document.getElementById(`text-${hour}`)
   localStorage.setItem(`element-${hour}`, textarea.value)
 }
@@ -29,8 +28,8 @@ for(var x = 0; x < workingHours.length; x++) {
   textarea.innerHTML = localStorage.getItem(`element-${workingHours[x]}`)
 }
 
-  // Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. 
+  // Code to apply the past, present, or future class to each time
+  // block by comparing the id to the current hour
   setInterval(displayTime,1000);
   function updateTimeBlocks() {
     var timeBlocks = $('.time-block');
@@ -61,7 +60,3 @@ for(var x = 0; x < workingHours.length; x++) {
 
 // Updates time display
   displayTime();
-
-// });
-
-

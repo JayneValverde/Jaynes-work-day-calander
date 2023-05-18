@@ -17,7 +17,7 @@ Link to deployed work day calander
 
 
 ## Scheduler App Preview
-![screenshot one](./Assets/workday.png)
+![screenshot one](./Assests/workday.png)
 
 
 ## Resources 
